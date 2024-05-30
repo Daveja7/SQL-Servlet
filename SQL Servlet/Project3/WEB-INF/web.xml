@@ -1,0 +1,97 @@
+<web-app>
+
+  <!-- General description of your Web application -->
+  <display-name>
+      Project 3
+  </display-name>
+
+  <description>
+    use JSP and Servlet Technology to run SQL commands from a browser.
+  </description>
+
+  <!-- Servlet definitions -->
+  <servlet>
+    <servlet-name>alpha</servlet-name>
+    <servlet-class>developmentalVersion.RootUserApp</servlet-class>
+    <init-param>
+     <param-name>databaseDriver</param-name>
+     <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+     <param-name>databaseName</param-name>
+     <param-value>jdbc:mysql://localhost:3306/project3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>570934Dsj</param-value>
+    </init-param>
+  </servlet>
+
+
+  <!-- Servlet mappings -->
+  <servlet-mapping>
+    <servlet-name>alpha</servlet-name>
+    <url-pattern>/RootUserApp</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>beta</servlet-name>
+    <servlet-class>developmentalVersion.ClientUserApp</servlet-class>
+    <init-param>
+     <param-name>databaseDriver</param-name>
+     <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+     <param-name>databaseName</param-name>
+     <param-value>jdbc:mysql://localhost:3306/project3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>client</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>password</param-value>
+    </init-param>
+  </servlet>
+
+ <!-- Servlet mappings -->
+  <servlet-mapping>
+    <servlet-name>beta</servlet-name>
+    <url-pattern>/ClientUserApp</url-pattern>
+  </servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>gamma</servlet-name>
+    <servlet-class>developmentalVersion.DataEntryUserApp</servlet-class>
+    <init-param>
+     <param-name>databaseDriver</param-name>
+     <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+     <param-name>databaseName</param-name>
+     <param-value>jdbc:mysql://localhost:3306/project3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>dataentry</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>dataentry</param-value>
+    </init-param>
+  </servlet>
+
+ <!-- Servlet mappings -->
+  <servlet-mapping>
+    <servlet-name>beta</servlet-name>
+    <url-pattern>/DataEntryUserApp</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>
